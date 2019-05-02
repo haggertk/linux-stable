@@ -18,6 +18,8 @@
  * If you intend to use the FPU in softirq you need to check first with
  * irq_fpu_usable() if it is possible.
  */
+extern void __kernel_fpu_begin(void);
+extern void __kernel_fpu_end(void);
 extern void kernel_fpu_begin(void);
 extern void kernel_fpu_end(void);
 extern bool irq_fpu_usable(void);
